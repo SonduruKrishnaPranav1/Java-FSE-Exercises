@@ -1,0 +1,25 @@
+Analysis Of Search Operations:
+
+Algorithm     | Time Complexity | Use-Case                     
+
+Linear Search | O(n)            | Unsorted or small datasets        
+Binary Search | O(log n)        | Sorted datasets, frequent lookups 
+
+
+
+Discussion:
+
+
+Use-Case of Binary search:
+
+Your product list is sorted (sort it once and maintain it).
+
+You have frequent searches and performance is critical.
+
+
+
+Use-Case of Linear search:
+
+The product list is small or unsorted.
+
+You don’t want to incur the cost of sorting.

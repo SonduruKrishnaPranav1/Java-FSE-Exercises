@@ -1,0 +1,27 @@
+package patterns;
+public class Logger {
+    // Step 1: Create a private static volatile instance
+    private static volatile Logger instance;
+
+    // Step 2: Private constructor
+    private Logger() {
+        System.out.println("Logger instance created");
+    }
+
+    // Step 3: Public method with double-checked locking
+    public static Logger getInstance() {
+        if (instance == null) {
+            synchronized (Logger.class) {
+                if (instance == null) {
+                    instance = new Logger();
+                }
+            }
+        }
+        return instance;
+    }
+
+    // Logging method
+    public void log(String message) {
+        System.out.println("[LOG]: " + message);
+    }
+}

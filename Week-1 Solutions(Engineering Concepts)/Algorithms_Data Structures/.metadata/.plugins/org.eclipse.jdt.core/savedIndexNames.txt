@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\krish\OneDrive\Documents\Week-1 Solutions(Engineering Concepts)\Algorithms_Data Structures\.metadata\.plugins\org.eclipse.jdt.core
+800416216.index
+4259438717.index
+1865797976.index

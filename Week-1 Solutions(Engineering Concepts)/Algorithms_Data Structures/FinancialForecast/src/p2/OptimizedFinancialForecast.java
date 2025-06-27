@@ -1,0 +1,29 @@
+package p2;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class OptimizedFinancialForecast {
+
+    static Map<Integer, Double> memo = new HashMap<>();
+
+    public static double forecastMemo(double principal, double rate, int years) {
+        if (years == 0) return principal;
+
+        if (memo.containsKey(years)) return memo.get(years);
+
+        double future = (1 + rate) * forecastMemo(principal, rate, years - 1);
+        memo.put(years, future);
+        return future;
+    }
+
+    public static void main(String[] args) {
+        double initialAmount = 10000;
+        double annualGrowthRate = 0.06;
+        int forecastYears = 10;
+
+        double result = forecastMemo(initialAmount, annualGrowthRate, forecastYears);
+        System.out.printf("Optimized Future Value after %d years: ₹%.2f\n", forecastYears, result);
+    }
+}
+

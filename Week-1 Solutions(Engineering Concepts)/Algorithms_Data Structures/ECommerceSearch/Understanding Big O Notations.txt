@@ -1,0 +1,27 @@
+Big O Notation:
+
+Big O notation describes the upper bound of time complexity in terms of input size n. It helps determine how well an algorithm scales and performs.
+
+O(1): Constant time
+
+O(n): Linear time
+
+O(log n): Logarithmic time
+
+O(n log n), O(n²): Worse performance with growing input size
+
+
+
+
+Best, Average and Worst Case Complexities for Search Operations:
+
+Best Case: The desired product is found at the beginning (for linear search) or in the middle (for binary search).
+
+Average Case: Random position in the list.
+
+Worst Case: Not present, or last element checked.
+
+ Algorithm     | Best Case | Average Case | Worst Case 
+
+ Linear Search | O(1)      | O(n)         | O(n)       
+ Binary Search | O(1)      | O(log n)     | O(log n)  

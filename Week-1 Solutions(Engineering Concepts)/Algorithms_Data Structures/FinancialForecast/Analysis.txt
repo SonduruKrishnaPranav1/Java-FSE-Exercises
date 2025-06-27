@@ -1,0 +1,48 @@
+In our recursive function:
+
+forecastRecursive(principal, rate, years)
+
+Each call reduces years by 1 until it hits 0. So for n years:
+
+We make n recursive calls.
+
+Each call does one multiplication → O(1) work.
+
+
+Time Complexity:
+
+O(n), where n is the number of years.
+
+
+Space Complexity:
+O(n) due to the call stack.
+
+If n is a large value (e.g., 10^4 or 10^5), this could lead to StackOverflowError in Java.
+
+
+Optimization:
+1 -> Use Iteration and avoid Recursion:
+
+Iterative Code:
+double forecastIterative(double principal, double rate, int years) {
+    for (int i = 0; i < years; i++) {
+        principal *= (1 + rate);
+    }
+    return principal;
+}
+
+2 -> Use Dynamic Programming Concepts like Memoization or Tabulation to reduce the time complexity:
+
+    Memoization Logic:
+
+    Map<Integer, Double> memo = new HashMap<>();
+
+    public static double forecastMemo(double principal, double rate, int years) {
+        if (years == 0) return principal;
+
+        if (memo.containsKey(years)) return memo.get(years);
+
+        double future = (1 + rate) * forecastMemo(principal, rate, years - 1);
+        memo.put(years, future);
+        return future;
+    }
