@@ -1,0 +1,9 @@
+// File: src/main/java/com/library/repository/BookRepository.java
+package com.library.repository;
+
+public class BookRepository {
+
+    public void fetchBooks() {
+        System.out.println("BookRepository: Fetching books from the database...");
+    }
+}

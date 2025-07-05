@@ -1,0 +1,137 @@
+1. Java Persistence API (JPA)
+
+
+JPA is a specification, not an implementation.
+
+Part of Java EE / Jakarta EE.
+
+Defines a standard for object-relational mapping (ORM) in Java.
+
+Introduced via JSR 220 (Java Specification Request).
+
+Includes annotations like @Entity, @Table, @Id, @OneToMany, etc.
+
+Provides interfaces like EntityManager, Query, TypedQuery, etc.
+
+Requires a JPA provider (like Hibernate, EclipseLink, etc.) for implementation.
+
+Offers vendor-neutral code to switch providers easily.
+
+
+Sample Code:
+
+import jakarta.persistence.*;
+
+@Entity
+public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+
+    // Getters & Setters
+}
+
+// Usage
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence-unit");
+EntityManager em = emf.createEntityManager();
+
+Employee emp = new Employee();
+emp.setName("John");
+
+em.getTransaction().begin();
+em.persist(emp);
+em.getTransaction().commit();
+em.close();
+
+
+
+ 2. Hibernate
+
+Hibernate is an ORM framework and also a JPA implementation.
+
+Provides concrete implementation for all JPA interfaces.
+
+Extends JPA with additional powerful features (e.g., HQL, caching, interceptors).
+
+You can use it with or without JPA.
+
+Offers Session, Transaction, session.save(), session.get(), etc.
+
+Popular default JPA provider in Spring Boot.
+
+Sample Code:
+
+import org.hibernate.*;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateExample {
+    public static void main(String[] args) {
+        Configuration cfg = new Configuration().configure(); // hibernate.cfg.xml
+        SessionFactory factory = cfg.buildSessionFactory();
+        Session session = factory.openSession();
+
+        Transaction tx = session.beginTransaction();
+
+        Employee emp = new Employee();
+        emp.setName("John");
+
+        session.save(emp);
+        tx.commit();
+        session.close();
+    }
+}
+
+
+3. Spring Data JPA
+
+A higher-level abstraction over JPA and Hibernate.
+
+Part of Spring Data family.
+
+Reduces boilerplate by:
+
+Auto-generating repository code.
+
+Providing query methods like findByNameContaining, findByEmail, etc.
+
+Uses JpaRepository, CrudRepository, and PagingAndSortingRepository interfaces.
+
+Automatically wires up repositories and manages transactions.
+
+Makes JPA easier to use within Spring Boot.
+
+Sample Code:
+
+import jakarta.persistence.*;
+
+@Entity
+public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+
+    // Getters & Setters
+}
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+}
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+public class EmployeeService {
+
+    @Autowired
+    private EmployeeRepository repository;
+
+    @Transactional
+    public void addEmployee(String name) {
+        Employee emp = new Employee();
+        emp.setName(name);
+        repository.save(emp);
+    }
+}
