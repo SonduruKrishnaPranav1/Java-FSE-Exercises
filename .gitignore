@@ -1,2 +1,22 @@
-**/bin
-**/.settings
+# Ignore Eclipse metadata and internal files
+**/.metadata/
+**/.classpath
+**/.project
+**/.settings/
+
+# Ignore build output
+target/
+bin/
+build/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Gradle and Maven wrappers
+.gradle/
+.mvn/
+*.log
+
+# Ignore node_modules (if applicable)
+node_modules/
