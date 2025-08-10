@@ -1,0 +1,14 @@
+# Ensure you are on master and it's clean
+git checkout master
+git status
+
+# List branches
+git branch -a
+
+# Pull latest from remote master
+git pull origin master
+
+# If you have local commits to push:
+git push origin master
+
+# Verify changes appear in the remote repository (view on GitHub/GitLab)

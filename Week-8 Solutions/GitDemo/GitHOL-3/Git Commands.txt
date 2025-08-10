@@ -1,0 +1,26 @@
+# Create and switch to a new branch
+git checkout -b GitNewBranch
+
+# Make changes in branch
+echo "branch content" > feature.txt
+git add feature.txt
+git commit -m "Add feature in GitNewBranch"
+
+# View status and switch back to master
+git status
+git checkout master
+
+# See differences between master and branch
+git fetch origin
+git diff master..GitNewBranch
+
+# (Optional) Use a visual diff tool like P4Merge for better view
+
+# Merge branch into master
+git merge GitNewBranch
+
+# Inspect history
+git log --oneline --graph --decorate
+
+# Delete local branch after merge
+git branch -d GitNewBranch

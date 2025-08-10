@@ -1,0 +1,143 @@
+krish@pranav MINGW64 ~/OneDrive/Documents/Digital Nurture 4.0/Week-8 Solutions/GitDemo/GitHOL-2 (master)
+$ echo "log content" > app.log
+
+krish@pranav MINGW64 ~/OneDrive/Documents/Digital Nurture 4.0/Week-8 Solutions/GitDemo/GitHOL-2 (master)
+$ mkdir logs
+
+krish@pranav MINGW64 ~/OneDrive/Documents/Digital Nurture 4.0/Week-8 Solutions/GitDemo/GitHOL-2 (master)
+$ echo "trace" > logs/trace.log
+
+krish@pranav MINGW64 ~/OneDrive/Documents/Digital Nurture 4.0/Week-8 Solutions/GitDemo/GitHOL-2 (master)
+$ printf "*.log\nlogs/\n" > .gitignore
+
+krish@pranav MINGW64 ~/OneDrive/Documents/Digital Nurture 4.0/Week-8 Solutions/GitDemo/GitHOL-2 (master)
+$ git status --ignored
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+        ../../../Week-1 Solutions(Engineering Concepts)/Algorithms_Data Structures/.metadata/.plugins/org.eclipse.core.runtime/
+        ../../../Week-1 Solutions(Engineering Concepts)/Algorithms_Data Structures/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.settings/
+        ../../../Week-1 Solutions(Engineering Concepts)/Algorithms_Data Structures/ECommerceSearch/.settings/
+        ../../../Week-1 Solutions(Engineering Concepts)/Algorithms_Data Structures/ECommerceSearch/bin/
+        ../../../Week-1 Solutions(Engineering Concepts)/Algorithms_Data Structures/FinancialForecast/.settings/
+        ../../../Week-1 Solutions(Engineering Concepts)/Algorithms_Data Structures/FinancialForecast/bin/
+        ../../../Week-1 Solutions(Engineering Concepts)/Design Patterns/.metadata/.plugins/org.eclipse.core.runtime/
+        ../../../Week-1 Solutions(Engineering Concepts)/Design Patterns/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.settings/
+        ../../../Week-1 Solutions(Engineering Concepts)/Design Patterns/FactoryMethodPatternExample/.settings/
+        ../../../Week-1 Solutions(Engineering Concepts)/Design Patterns/FactoryMethodPatternExample/bin/
+        ../../../Week-1 Solutions(Engineering Concepts)/Design Patterns/SingletonPatternExample/.settings/
+        ../../../Week-1 Solutions(Engineering Concepts)/Design Patterns/SingletonPatternExample/bin/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/.metadata/.plugins/org.eclipse.core.runtime/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.settings/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/.metadata/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/AAAPattern/.settings/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/AAAPattern/bin/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/AAAPattern/target/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/AssertionsInJUnit/.settings/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/AssertionsInJUnit/bin/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/AssertionsInJUnit/target/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/Exercise1SettingUpJUnit/.settings/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/Exercise1SettingUpJUnit/bin/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/JUnit Basic Testing Exercises/Exercise1SettingUpJUnit/target/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/Mockito Exercises/.metadata/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/Mockito Exercises/MockingAndStubbing/.settings/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/Mockito Exercises/MockingAndStubbing/bin/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/Mockito Exercises/MockingAndStubbing/target/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/SL4J Logging Exercises/.metadata/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/SL4J Logging Exercises/LoggingExample/.settings/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/SL4J Logging Exercises/LoggingExample/bin/
+        ../../../Week-2 Solutions/JUnit, Mockito and SL4J/SL4J Logging Exercises/LoggingExample/target/
+        ../../../Week-3 Solutions/SpringCore_Maven/Exercise-3/.idea/compiler.xml
+        ../../../Week-3 Solutions/SpringCore_Maven/Exercise-3/.idea/jarRepositories.xml
+        ../../../Week-3 Solutions/SpringCore_Maven/Exercise-3/.idea/workspace.xml
+        ../../../Week-3 Solutions/SpringCore_Maven/LibraryManagement-Exercise2/.idea/
+        ../../../Week-3 Solutions/SpringCore_Maven/LibraryManagement-Exercise2/HELP.md
+        ../../../Week-3 Solutions/SpringCore_Maven/LibraryManagement-Exercise2/target/
+        ../../../Week-3 Solutions/SpringCore_Maven/LibraryManagement/.idea/
+        ../../../Week-3 Solutions/SpringCore_Maven/LibraryManagement/HELP.md
+        ../../../Week-3 Solutions/SpringCore_Maven/LibraryManagement/target/
+        ../../../Week-3 Solutions/SpringDataJPA with SpringBoot and Hibernate/ORM-LEARN/.idea/compiler.xml
+        ../../../Week-3 Solutions/SpringDataJPA with SpringBoot and Hibernate/ORM-LEARN/.idea/jarRepositories.xml
+        ../../../Week-3 Solutions/SpringDataJPA with SpringBoot and Hibernate/ORM-LEARN/.idea/workspace.xml
+        ../../../Week-4 Solutions/JWT-Hands-on/JWT/.classpath
+        ../../../Week-4 Solutions/JWT-Hands-on/JWT/.metadata/.plugins/org.eclipse.core.runtime/
+        ../../../Week-4 Solutions/JWT-Hands-on/JWT/.metadata/.plugins/org.eclipse.egit.core/
+        ../../../Week-4 Solutions/JWT-Hands-on/JWT/.project
+        ../../../Week-4 Solutions/JWT-Hands-on/JWT/.settings/
+        ../../../Week-4 Solutions/JWT-Hands-on/JWT/HELP.md
+        ../../../Week-4 Solutions/JWT-Hands-on/JWT/target/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 1(Spring Web Project)/.classpath
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 1(Spring Web Project)/.metadata/.plugins/org.eclipse.core.runtime/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 1(Spring Web Project)/.metadata/.plugins/org.eclipse.egit.core/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 1(Spring Web Project)/.project
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 1(Spring Web Project)/.settings/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 1(Spring Web Project)/HELP.md
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 1(Spring Web Project)/target/
+        "../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 2(Spring Core \342\200\223 Load SimpleDateFormat from Spring Configuration XML )/.classpath"
+        "../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 2(Spring Core \342\200\223 Load SimpleDateFormat from Spring Configuration XML )/.metadata/.plugins/org.eclipse.core.runtime/"
+        "../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 2(Spring Core \342\200\223 Load SimpleDateFormat from Spring Configuration XML )/.metadata/.plugins/org.eclipse.egit.core/"
+        "../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 2(Spring Core \342\200\223 Load SimpleDateFormat from Spring Configuration XML )/.project"
+        "../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 2(Spring Core \342\200\223 Load SimpleDateFormat from Spring Configuration XML )/.settings/"
+        "../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 2(Spring Core \342\200\223 Load SimpleDateFormat from Spring Configuration XML )/HELP.md"
+        "../../../Week-4 Solutions/Spring-Rest Hands-on 1/Hands-On 2(Spring Core \342\200\223 Load SimpleDateFormat from Spring Configuration XML )/target/"
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/Get Country Based on Country Code/.classpath
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/Get Country Based on Country Code/.metadata/.plugins/org.eclipse.core.runtime/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/Get Country Based on Country Code/.metadata/.plugins/org.eclipse.egit.core/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/Get Country Based on Country Code/.project
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/Get Country Based on Country Code/.settings/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/Get Country Based on Country Code/HELP.md
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/Get Country Based on Country Code/target/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/HelloWorldRestful WebService/.classpath
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/HelloWorldRestful WebService/.metadata/.plugins/org.eclipse.core.runtime/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/HelloWorldRestful WebService/.metadata/.plugins/org.eclipse.egit.core/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/HelloWorldRestful WebService/.project
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/HelloWorldRestful WebService/.settings/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/HelloWorldRestful WebService/HELP.md
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/HelloWorldRestful WebService/target/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/REST - CountryWebService/.classpath
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/REST - CountryWebService/.metadata/.plugins/org.eclipse.core.runtime/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/REST - CountryWebService/.metadata/.plugins/org.eclipse.egit.core/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/REST - CountryWebService/.project
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/REST - CountryWebService/.settings/
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/REST - CountryWebService/HELP.md
+        ../../../Week-4 Solutions/Spring-Rest Hands-on 2/REST - CountryWebService/target/
+        ../../../Week-5 Solutions/EmployeeID For Account/microservices/account/.classpath
+        ../../../Week-5 Solutions/EmployeeID For Account/microservices/account/.project
+        ../../../Week-5 Solutions/EmployeeID For Account/microservices/account/.settings/
+        ../../../Week-5 Solutions/EmployeeID For Account/microservices/account/HELP.md
+        ../../../Week-5 Solutions/EmployeeID For Account/microservices/account/target/
+        ../../../Week-5 Solutions/EmployeeID For Loan/microservices/loan/.classpath
+        ../../../Week-5 Solutions/EmployeeID For Loan/microservices/loan/.project
+        ../../../Week-5 Solutions/EmployeeID For Loan/microservices/loan/.settings/
+        ../../../Week-5 Solutions/EmployeeID For Loan/microservices/loan/HELP.md
+        ../../../Week-5 Solutions/EmployeeID For Loan/microservices/loan/target/
+        ../../../Week-6 Solutions/React JS/ReactJSHOL-1/firstreactapp/node_modules/
+        ../../../Week-6 Solutions/React JS/ReactJSHOL-2/studentapp/node_modules/
+        ../../../Week-6 Solutions/React JS/ReactJSHOL-3/scorecalculatorapp/node_modules/
+        ../../../Week-6 Solutions/React JS/ReactJSHOL-4/blogwebsite/node_modules/
+        ../../../Week-6 Solutions/React JS/ReactJSHOL-5/cohortdashboard/node_modules/
+        ../../../Week-7 Solutions/ReactJS/ReactJSHOL-10/officeapp/node_modules/
+        ../../../Week-7 Solutions/ReactJS/ReactJSHOL-11/eventexamplesapp/node_modules/
+        ../../../Week-7 Solutions/ReactJS/ReactJSHOL-12/ticketbookingapp/node_modules/
+        ../../../Week-7 Solutions/ReactJS/ReactJSHOL-13/blogapp/node_modules/
+        ../../../Week-7 Solutions/ReactJS/ReactJSHOL-9/cricketapp/node_modules/
+        app.log
+        logs/
+
+
+It took 40.31 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+krish@pranav MINGW64 ~/OneDrive/Documents/Digital Nurture 4.0/Week-8 Solutions/GitDemo/GitHOL-2 (master)
+$
+
+krish@pranav MINGW64 ~/OneDrive/Documents/Digital Nurture 4.0/Week-8 Solutions/GitDemo/GitHOL-2 (master)
+$ git add .gitignore
+warning: in the working copy of 'Week-8 Solutions/GitDemo/GitHOL-2/.gitignore', LF will be replaced by CRLF the next time Git touches it
+

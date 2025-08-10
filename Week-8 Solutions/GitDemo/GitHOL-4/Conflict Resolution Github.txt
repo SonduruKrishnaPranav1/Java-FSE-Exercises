@@ -1,0 +1,20 @@
+# Start clean
+git checkout master
+git status
+
+# Create branch and add hello.xml
+git checkout -b GitWork
+echo "<hello>from branch</hello>" > hello.xml
+git add hello.xml
+git commit -m "Add hello.xml in branch"
+
+# Switch to master and add a conflicting hello.xml
+git checkout master
+echo "<hello>from master</hello>" > hello.xml
+git add hello.xml
+git commit -m "Add hello.xml in master"
+
+# Now attempt merge -> conflict expected
+git merge GitWork
+# Git will report conflict in hello.xml
+git status
